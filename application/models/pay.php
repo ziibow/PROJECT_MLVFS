@@ -202,6 +202,23 @@ function updateStatusNoLoan()
 	$this->db->where('memberId',$this->getMemberId());
 	$this->db->update('tblmember',$data);
 	}
+	
+function getReportPay()
+	{
+		$this->db->join('tblmember','tblmember.memberId = tblloan.memberId');
+		$this->db->join('tbltype','tbltype.typeId = tblloan.typeId');
+		$this->db->where('tblloan.statusLoan','2');
+		return $this->db->get('tblloan')->result_array();
+		}
+		
+function getReportNotPay()
+	{
+		$this->db->join('tblmember','tblmember.memberId = tblloan.memberId');
+		$this->db->join('tbltype','tbltype.typeId = tblloan.typeId');
+		$this->db->where('tblloan.statusLoan','1');
+		return $this->db->get('tblloan')->result_array();
+		}
+
 		
 
 }

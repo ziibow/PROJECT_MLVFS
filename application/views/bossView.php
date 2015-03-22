@@ -201,6 +201,20 @@ $('.listLoanMember').fancybox({
     }
 	
 });
+$('.report').fancybox({
+		openEffect  : 'fade',
+		closeEffect : 'fade',
+		maxWidth	: 1000,
+		maxHeight	: 530,
+		minWidth	: 1000,
+		minHeight	: 530,
+		fitToView	: true,
+		width 		: '100%',
+		height		: '100%',
+		padding     : 5
+		
+	
+});
 </script>
 
 
@@ -249,9 +263,9 @@ $('.listLoanMember').fancybox({
       <li>
         <a class="mainMenu" href="" onClick="return false"><img src="<?php echo base_url();?>img/icon/magMember.png" height="30px" > รายงานสรุปข้อมูลกองทุน</a>
         <ul>
-          <li><a class="submenu"  href="<?php echo base_url();?>index.php/boss/memberByArea">- สรุปยอดชำระเงิน</a></li>
-          <li><a class="submenu"  href="<?php echo base_url();?>index.php/boss/memberAll">- สรุปยอดค้างชำระเงิน</a></li>
-		  <li><a class="submenu" href="<?php echo base_url();?>index.php/boss/police">- สรุปยอดงบประมาณคงเหลือ</a></li>
+          <li><a class="report" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/reportAllPay">- สรุปยอดชำระเงิน</a></li>
+          <li><a class="report" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/reportAllNotPay">- สรุปยอดค้างชำระเงิน</a></li>
+		  <li><a class="report"data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/police">- สรุปยอดงบประมาณคงเหลือ</a></li>
         </ul>
       </li>
    </ul>

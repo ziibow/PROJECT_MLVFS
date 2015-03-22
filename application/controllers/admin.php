@@ -351,6 +351,23 @@ function payAction($loanId,$memberId)
 	echo 'ชำระสำเร็จ';
 	
 	}
+	
+function reportAllPay()
+{
+	$data ['listMember'] = $this->Pay->getReportPay();
+	$data ['header']= "รายงานสรุปยอดชำระเงิน";
+	//var_dump($data);
+	$this->load->view('reportPay',$data);
+	}
+	
+function reportAllNotPay()
+{
+	$data ['listMember'] = $this->Pay->getReportNotPay();
+	$data ['header']= "รายงานสรุปยอดค้างชำระเงิน";
+	//var_dump($data);
+	$this->load->view('reportPay',$data);
+	
+	}
 
 }
 
