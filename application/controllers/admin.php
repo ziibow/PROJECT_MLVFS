@@ -329,6 +329,7 @@ function listPaymentMember($memberId)
 	
 function pay($loanId,$memberId)
 {
+	
 	echo "<body style='text-align: center'><p>คุณต้องการชำระหรือไม่</p>
 				<p>
 				  <a href='".base_url()."index.php/admin/payAction/".$loanId."/".$memberId."'><input type='button' name='button' id='button' value='ยืนยันการชำระ'></a>  &nbsp;&nbsp;&nbsp;

@@ -31,7 +31,7 @@
 </p>
   <br>
   <div id="searchResult">
-<table width="80%" border="0" align="center" cellpadding="7" cellspacing="3">
+<table width="75%" border="0" align="center" cellpadding="7" cellspacing="3">
     <tr>   
     	<th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>รหัสสมาชิก</p></th>
     	<th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>ชื่อ - สกุล</p></th>
@@ -39,8 +39,7 @@
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">เบอร์โทร</th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ตำแหน่ง</th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">สถานะ</th>
-          
-           <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ทำรายการชำระ</th>
+        <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ทำรายการชำระ</th>
        
     </tr>
     <?php

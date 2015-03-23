@@ -1,7 +1,12 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/main.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
 <div class="addFunds">
-
-
 <form action="<?php echo base_url(); ?>index.php/admin/addFunds" method="post">
+<br><br><br><br>
+<div class="table" align="center">
 <table width="31%" height="168" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
@@ -33,5 +38,6 @@
     </tr>
   </tbody>
 </table>
+</div>
 </form>
 </div>

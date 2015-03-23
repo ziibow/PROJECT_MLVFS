@@ -1,10 +1,17 @@
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/main.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
 <?php foreach ($funds as $f){?>
 <form action="<?php echo base_url(); ?>index.php/admin/editFundsAction" method="post">
 <input name="fundId" type="hidden" value="<?php echo $f['fundId'] ?>" required="required"  readonly="readonly">
+<br><br><br><br>
+<div class="table" align="center">
 <table width="31%" height="168" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
-      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4">เพิ่มงบประมาณ</td>
+      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4">แก้ไขงบประมาณ</td>
     </tr>
     <tr>
       <td width="47%" height="35" align="right">วันที่ :</td>
@@ -32,5 +39,6 @@
     </tr>
   </tbody>
 </table>
+</div>
 </form>
 <?php }?>

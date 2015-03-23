@@ -1,9 +1,11 @@
-
-
-
-<br><br><br><br>
- <h2 id="headTitleContent"><?php echo $header ;?></h2>
-	<div class="table" align="right">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/menu.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/main.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
+<br><br>
+ <h2 id="headTitleContent" align="center"><?php echo $header ;?></h2>
+	<div class="table" align="center">
   <p>&nbsp;</p>
   <br>
   <div id="searchResult">

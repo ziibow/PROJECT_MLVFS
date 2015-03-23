@@ -6,6 +6,8 @@
 <?php foreach ($member as $e){?>
 <form action="<?php echo base_url(); ?>index.php/admin/addMemberLoanAction" method="post">
 <input name="memberId" type="hidden" value="<?php echo $e['memberId'] ?>" required="required"  readonly="readonly">
+<br><br><br><br>
+<div class="table" align="center">
 <table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
@@ -45,5 +47,6 @@
     </tr>
   </tbody>
 </table>
+</div>
 </form>
 <?php }?>
