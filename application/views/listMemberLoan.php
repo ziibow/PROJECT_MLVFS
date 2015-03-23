@@ -13,7 +13,7 @@
     <input type="radio" <?php if ($select==1){echo 'checked';}?> class="loan" name="radio" id="radio" value="1">
     <label for="radio">อยู่ในระหว่างการกู้ </label>
       <input type="radio"  <?php if ($select==2){echo 'checked';}?> class="loan" name="radio" id="radio" value="2">
-    <label for="radio">ผุ้ชำระเงินแล้ว </label>
+    <label for="radio">สถานะปกติ </label>
       <input type="radio" <?php if ($select==3){echo 'checked';}?> class="loan" name="radio" id="radio" value="3">
     <label for="radio">ทั้ง 2ประเภท </label>
   </p>
@@ -48,7 +48,7 @@
 		  echo 'อยู่ในระหว่างการกู้ยืม';
 		  }
 		  else {
-			  	echo 'พ้นสภาพการกู้';
+			  	echo 'ปกติ';
 			  }
 	  ;?></p></td>
       

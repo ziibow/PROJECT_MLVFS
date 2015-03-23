@@ -11,7 +11,7 @@
 <table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
-      <td height="33" colspan="2" align="center" bgcolor="#0FCFB4">แก้ไขข้อมูลสมาชิก</td>
+      <td height="33" colspan="2" align="center" bgcolor="#0FCFB4">ทำรายการกู้ยืม</td>
     </tr>
     <tr>
       <td height="33" align="right">วันที่ :</td>
