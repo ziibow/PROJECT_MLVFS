@@ -215,7 +215,7 @@ function deleteMember($memberId){
 	{
 		//$data['type']= $this->Member->getMemberType();
 		$data['funds']= $this->Funds->getAllFunds();
-		//$this->load->view('editFunds',$data);
+		
 		$data['loan']= $this->Funds->getAllUseFunds();
 		
 		$sumdata=array();
@@ -236,10 +236,9 @@ function deleteMember($memberId){
 			}
 			
 		}
-
-		//$this->load->view('reportFund',$data);
 		$data['sumdata']=$sumdata;
-		var_dump($data);
+		$this->load->view('reportFund',$data);
+		//var_dump($data);
 		}
 ##############################################################
 		
