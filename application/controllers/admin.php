@@ -234,7 +234,6 @@ function deleteMember($memberId){
 						$i++;
 					}
 			}
-			
 		}
 		$data['sumdata']=$sumdata;
 		$this->load->view('reportFund',$data);

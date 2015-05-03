@@ -135,6 +135,7 @@ function getPK()
 ############################################
 	function getAllFunds()
 	{
+		$this->db->join('tbltype','tbltype.typeId = tblfunds.typeId');
 		$this->db->select('*');
 		$this->db->select('sum(fundAmount) AS sumfundAmount');
 		$this->db->group_by('year');
@@ -146,6 +147,8 @@ function getPK()
 ############################################
 	function getAllUseFunds()
 	{
+		$this->db->join('tbltype','tbltype.typeId = tblloan.typeId');
+
 		$this->db->select('*');
 		$this->db->select('sum(loanNum) AS sumloanNum');
 		$this->db->group_by('year');

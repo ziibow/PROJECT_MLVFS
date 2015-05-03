@@ -48,7 +48,7 @@
   </tr>
   <?php }?>
 </table>
-<?php echo $sum; ?>
+
 <p align="center">
   <input type="button" onClick="window.print()" name="button" id="button" value="พิมพ์">
 </p>
