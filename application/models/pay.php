@@ -164,6 +164,7 @@ function addLoan()
 			'loanDate' => date('Y-m-d'),
 			'typeId' => $this->getTypeId(),
 			'memberId' => $this->getMemberId(),
+			'year' => date('Y')
 			
 		);
 	$this->db->insert('tblloan', $data); 

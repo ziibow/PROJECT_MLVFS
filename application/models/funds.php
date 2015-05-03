@@ -98,7 +98,8 @@ function addFund()
 			'typeId ' => $this->getTypeId(),
 			'fundDetail' => $this->getFundDetail(),
 			'fundAmount' => $this->getFundAmount(),
-			'fundDate' => date('Y-m-d')
+			'fundDate' => date('Y-m-d'),
+			'year' => date('Y')
 			
 		);
 	$this->db->insert('tblfunds', $data); 
@@ -130,6 +131,29 @@ function getPK()
 	}
 	
 	
+	
+############################################
+	function getAllFunds()
+	{
+		$this->db->select('*');
+		$this->db->select('sum(fundAmount) AS sumfundAmount');
+		$this->db->group_by('year');
+		$query = $this->db->get('tblfunds')->result_array();
+		return $query;
+		}
+############################################
+
+############################################
+	function getAllUseFunds()
+	{
+		$this->db->select('*');
+		$this->db->select('sum(loanNum) AS sumloanNum');
+		$this->db->group_by('year');
+		$query = $this->db->get('tblloan')->result_array();
+		return $query;
+		}
+############################################
+	
 	function deleteFund()
 	{
 	
@@ -145,6 +169,17 @@ function getByType()
 		$query = $this->db->get('tblfunds')->result_array();
 		return $query;
 	}
+	
+	
+############ FUNCTION FINDBYALL ###############
+function findAllFund()
+	{	
+	$this->db->select_sum('fundAmount');
+	$this->db->group_by('year');
+		$query = $this->db->get('tblfunds')->result_array();
+		return $query;
+	}
+########## END FUNCTION FINDBYALL #############
 	
 
 }

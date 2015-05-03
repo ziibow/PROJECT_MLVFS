@@ -210,6 +210,39 @@ function deleteMember($memberId){
 		echo 'แก้ไขเสร็จแล้ว';
 		}
 		
+##############################################################
+ 	function allFunds()
+	{
+		//$data['type']= $this->Member->getMemberType();
+		$data['funds']= $this->Funds->getAllFunds();
+		//$this->load->view('editFunds',$data);
+		$data['loan']= $this->Funds->getAllUseFunds();
+		
+		$sumdata=array();
+		$i=0;
+		foreach($data['funds']as $r)
+		{
+			foreach($data['loan']as $s)
+			{
+					if($r['year']==$s['year'])
+					{
+						$sumdata[$i]=array();
+						$sumdata[$i]['year']=0;
+						$sumdata[$i]['sum']=0;
+						$sumdata[$i]['year']=$s['year'];
+						$sumdata[$i]['sum']=$r['sumfundAmount']-$s['sumloanNum'];
+						$i++;
+					}
+			}
+			
+		}
+
+		//$this->load->view('reportFund',$data);
+		$data['sumdata']=$sumdata;
+		var_dump($data);
+		}
+##############################################################
+		
 
 ########### function showVillage แสดงข้อมูลผู้ใช้งานระบบ ############
 	function showVillage()
@@ -262,7 +295,8 @@ function listLoan()
 	$this->load->view('listLoan',$data);
 	}
 	
-	########### function showMember แสดงข้อมูลผู้ใช้งานระบบ ############
+########### function showMember แสดงข้อมูลผู้ใช้งานระบบ ############
+
 	function searchMemberNoLoan()
 	{
 		$memberName = $this->input->post('searchBox');
@@ -273,6 +307,8 @@ function listLoan()
 		
 		}
 ######## END function showMember แสดงข้อมูลผู้ใช้งานระบบ ############
+
+
 
 ###### function addFundsView แสดงหน้าshow addFunds ########	
 	function addMemberLoanView($memberId)
@@ -308,7 +344,7 @@ function addMemberLoanAction()
 	$this->load->view('listPayment',$data);
 	}
 	
-	###### function addFundsView แสดงหน้าshow addFunds ########	
+###### function addFundsView แสดงหน้าshow addFunds ########	
 	function addPayMember($memberId)
 	{
 		$this->Member->setMemberId($memberId);
@@ -368,6 +404,13 @@ function reportAllNotPay()
 	//var_dump($data);
 	$this->load->view('reportPay',$data);
 	
+	}
+	
+	
+function sumFunds()
+{
+	$data=$this->Funds->findAllFund();
+	var_durm($data);
 	}
 
 }

@@ -165,6 +165,7 @@ $('.addLoanMember').fancybox({
     }
 	
 });
+
 $('.addPayment').fancybox({
 		openEffect  : 'fade',
 		closeEffect : 'fade',
@@ -265,7 +266,7 @@ $('.report').fancybox({
         <ul>
           <li><a class="report" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/reportAllPay">- สรุปยอดชำระเงิน</a></li>
           <li><a class="report" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/reportAllNotPay">- สรุปยอดค้างชำระเงิน</a></li>
-		  <li><a class="report"data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/police">- สรุปยอดงบประมาณคงเหลือ</a></li>
+		  <li><a class="report"data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/allFunds">- สรุปยอดงบประมาณคงเหลือ</a></li>
         </ul>
       </li>
    </ul>

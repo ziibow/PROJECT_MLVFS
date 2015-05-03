@@ -40,6 +40,15 @@ echo $date->format('d-m-Y');?></p></td>
   </tr>
   <?php }?>
 </table>
-<?php echo number_format ($sum ,2,'.',',') ;?>
+<table width="25%" border="0" align="center" cellpadding="7" cellspacing="3">
+ <tr>
+    <td bgcolor="#86C2F4"> <?php echo 'งบประมาณทั้งหมด';?></td>
+    <td> <?php echo number_format ($sum ,2,'.',',') ;?></td>
+    <td bgcolor="#86C2F4"> <?php echo 'บาท'?></td>
+  
+  </tr>
+ 
+</table>
+
 
 

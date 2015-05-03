@@ -28,7 +28,7 @@
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ตำแหน่ง</th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">สถานะ</th>
           
-           <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">แก้ไข</th>
+     
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ลบ</th>
     </tr>
     <?php
@@ -52,9 +52,7 @@
 			  }
 	  ;?></p></td>
       
-      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><a href="<?php echo base_url();?>index.php/admin/editMemberView/<?php echo $m['memberId'];?>" class="editMember fancybox.iframe">
-      <img class="iconAction" src="<?php echo base_url();?>img/editIcon.png" width="25px" height="25px"  style="margin-bottom:-8px;">
-      </a></td>
+    
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><a href="<?php echo base_url();?>index.php/admin/deleteMember/<?php echo $m['memberId'];?>" class="deleteMember fancybox.iframe">
       <img class="iconAction" src="<?php echo base_url();?>img/deleteIcon.png" width="25px" height="25px"  style="margin-bottom:-8px;">
       </a></td>
