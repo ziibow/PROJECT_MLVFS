@@ -11,9 +11,11 @@
     	<link rel="stylesheet" href="<?php echo base_url();?>css/table.css">
      	<link rel="stylesheet" href="<?php echo base_url();?>css/font.css">
 	  	<link href="<?php echo base_url()?>css/pace-theme-barber-shop.css" rel="stylesheet" />
-        
-     <script src="<?php echo base_url();?>js/jquery-1.11.1.min.js"></script>
-  	
+        <link rel="stylesheet" href="<?php echo base_url();?>css/slide.css">
+     
+	 <script src="<?php echo base_url();?>js/jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
      
          
  	 <script>
@@ -60,6 +62,20 @@ $(document).ready(function() {
 });
 </script>
 	
+    
+    <script>
+                $(function(){
+                        $("#slides").slides({
+                                preload: true,//เปิดใช้รูปขณะโหลด
+                                preloadImage: "/img/loading.gif",//รูปขณะโหลด
+                                generatePagination: true,//เปิดใช้ Pagination
+                                effect: "fade" ,//effect ของสไลด์ มี 2 แบบ คือ fade,slide
+                                play: 3000,//ระยะเวลาเปลี่ยนภาพ
+                                hoverPause: true//หยุดเล่นอัติโนมัติเมื่อเอาเม้าไปวางไว้บนสไลด์
+                        });
+                });
+        </script>
+        
 </head>
 
 <body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" id="homeLoginBody" >
@@ -111,6 +127,42 @@ $(document).ready(function() {
 <!--END WRAPPER-->
 
 <!--GRADIENT--><div class="gradient"></div><!--END GRADIENT-->
+
+ <div id="container">
+        <div id="example">
+            <div id="slides">
+                <div class="slides_container">
+                    <div class="slide">
+                            <img src="img/1.jpg" width="550" height="350" alt="Slide 1"></a>
+                    </div>
+                    <div class="slide">
+                            <img src="img/2.jpg" width="550" height="350" alt="Slide 2"></a>
+                    </div>
+                    <div class="slide">
+                           <img src="img/3.jpg" width="550" height="350" alt="Slide 3"></a>
+                    </div>
+                    <div class="slide">
+                            <img src="img/4.jpg" width="550" height="350" alt="Slide 4"></a>
+                    </div>
+                    <div class="slide">
+                            <img src="img/5.jpg" width="550" height="350" alt="Slide 5"></a>
+                    </div>
+                      <div class="slide">
+                           <img src="img/6.jpg" width="550" height="350" alt="Slide 6"></a>
+                    </div>
+                    <div class="slide">
+                            <img src="img/7.jpg" width="550" height="350" alt="Slide 7"></a>
+                    </div>
+                    <div class="slide">
+                            <img src="img/8.jpg" width="550" height="300" alt="Slide 8"></a>
+                    </div>
+                    
+                </div>
+                <a href="#" class="prev"><img src="img/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
+                <a href="#" class="next"><img src="img/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
