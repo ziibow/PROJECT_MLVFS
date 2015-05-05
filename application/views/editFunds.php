@@ -21,7 +21,7 @@
                     <td height="37" align="right">ประเภทกองทุน : </td>
                     <td><select name="typeId" id="typeId">
                       <?php foreach ($type as $t ){?>
-                    <option value="<?php echo $t['typeId'];?>" ><?php echo $t['typeName'];?> </option>
+                    	<option value="<?php echo $t['typeId'];?>" ><?php echo $t['typeName'];?> </option>
                           <?php 
                           }?>
                         </select></td>

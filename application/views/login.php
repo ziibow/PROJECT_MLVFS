@@ -20,7 +20,22 @@
          
  	 <script>
 	 	$(document).ready(function(){
-	
+	$(document).keypress(function(e) {
+    if(e.which == 13) {
+        if($("#username").val()==""){
+			$("#username").focus();
+		}
+		if($("#password").val()==""&&$("#username").val()==""){
+			$("#username").focus();
+		}
+		if($("#password").val()==""&&$("#username").val()!=""){
+			$("#password").focus();
+		}
+		if($("#password").val()!=""&&$("#username").val()!=""){
+			$("#loginBt").trigger("click");
+		}
+    }
+});
 			$("#loginBt").click(function(){
 				
 			  $.post("<?php echo base_url();?>index.php/home/Login",

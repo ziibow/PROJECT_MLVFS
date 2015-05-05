@@ -1,5 +1,5 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/menu.css"/>
-<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/main.css"/>
+
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
@@ -11,7 +11,15 @@
   <br>
   <div id="searchResult">
   <div align="center">
-<table width="40%" border="0" align="center" cellpadding="7" cellspacing="3">
+<table width="73%" border="0" align="center" cellpadding="7" cellspacing="3">
+				<th colspan="4" align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>
+                    	<div id="logo">
+                        	<img src="<?php echo base_url();?>imgs/logo.png" width="100px">
+                    </div> 
+                    <h2 id="headTitleContent" align="left"><?php echo "กองทุนหมู่บ้าน บ้านแม่เลิม" ;?></h2>
+                    <h2 align="left"><?php echo "บ้านแม่เลิม หมู่2 ตำบลบ้านเป้า  อำเภอแม่แตง  จังหวัดเชียงใหม่" ;?></h2> 
+                    <h2 id="headTitleContent" align="center"><?php echo "รายงานสรุปยอดงบประมาณคงเหลือ";?></h2></th>  
+                </tr>
     <tr> 
             <th width="19%" align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>ปี่ที่งบประมาณเข้า </p></th>
             <th width="19%" align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>จำนวนเงิน</p></th>
@@ -47,10 +55,10 @@
 
 
   <div align="center">
-<table width="40%" border="0" align="center" cellpadding="7" cellspacing="3">
+<table width="73%" height="142" border="0" align="center" cellpadding="7" cellspacing="3">
     <tr> 
-            <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ปีที่กู้ยืม</th>
-            <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>จำนวนเงิน</p></th>  
+            <th width="41%" align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ปีที่กู้ยืม</th>
+            <th width="59%" align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>จำนวนเงิน</p></th>  
             
        
     </tr>
@@ -83,7 +91,7 @@
 
 <!--<?php var_dump($sumdata);?>-->
 <div align="center">
-<table width="40%" border="0" align="center" cellpadding="7" cellspacing="3">
+<table width="73%" height="156" border="0" align="center" cellpadding="7" cellspacing="3">
     <tr> 
             <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ปีที่กู้ยืม</th>
             <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>ยอดคงเหลือ</p></th>  
