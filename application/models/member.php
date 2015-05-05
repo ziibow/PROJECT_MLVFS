@@ -215,7 +215,9 @@ function login()
 	
 ############ FUNCTION FINDBYALL ###############
 function findByAll()
-	{	$this->db->where('memberStatus','member');
+	{	
+		$this->db->where('memberStatus','member');
+		$this->db->where('show',1);
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
@@ -276,9 +278,11 @@ function getMemberPK()
 	
 	function deleteMember()
 	{
-	
+		$data = array(
+		'show'=>2
+		);
 		$this->db->where('memberId',$this->getMemberId());
-		$this->db->delete('tblmember'); 
+		$this->db->update('tblmember',$data); 
 	
 	}
 	

@@ -216,28 +216,35 @@ $('.report').fancybox({
 		
 	
 });
+
+function confirme(){
+	var x = confirm("คุณต้องการลบหรือไม่");
+	return x;
+}
 </script>
 
 
-  </head>
+</head>
   <body>
-  <div id="header">
-	<div id="logo">
-		<img src="<?php echo base_url();?>imgs/logo.png" width="150px"></div>
-	<div class="img"></div>
-		<p class="p">ระบบบริหารจัดการ ระบบเงินกู้กองทุนหมู่บ้าน บ้านแม่เลิม<br>
-		The Administration Management Loan Village Fund System For Mae Learm Village</p> <?php
-	$data =$this->session->userdata('dataLogin'); 
-	//var_dump($data);
-	//die;
-	echo "ยินดีต้อนรับnbsp;&nbsp;&nbsp;คุณ:";
-	 echo $data[0]['memberName'] , $data[0]['memberLastname']; ?>
-	&nbsp;&nbsp;&nbsp;&nbsp;<?php if( $data[0]['memberStatus']=='boss'){
-	echo "<br>สถานะ&nbsp;&nbsp;&nbsp;";
-		echo 'กรรมการ';
-		} ?><a href="<?php echo base_url();?>index.php/home/logOut">ออกจากระบบ</a></div></div>
+  		<div id="header">
+			<div id="logo">
+					<img src="<?php echo base_url();?>imgs/logo.png" width="150px"></div>
+					<div class="img"></div>
+		<p class="p">ระบบบริหารจัดการ ระบบเงินกู้กองทุนหมู่บ้าน บ้านแม่เลิม<br>The Administration Management Loan Village Fund System For Mae Learm Village</p> 
+		
+		<?php
+				$data =$this->session->userdata('dataLogin'); 
+					echo "ยินดีต้อนรับnbsp;&nbsp;&nbsp;คุณ:";
+					echo $data[0]['memberName'] , $data[0]['memberLastname']; ?>&nbsp;&nbsp;&nbsp;&nbsp;<?php if( $data[0]['memberStatus']=='boss'){
+					echo "<br>สถานะ&nbsp;&nbsp;&nbsp;";
+					echo 'กรรมการ';
+		} ?>
+        			<a href="<?php echo base_url();?>index.php/home/logOut">ออกจากระบบ</a>
+         	</div>
+         </div>
         
 <br><br><br><br><br>
+
 <div id="menu">
 		<ul class="dropdown">
  			<li id="headMenubg">
