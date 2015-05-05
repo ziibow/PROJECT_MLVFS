@@ -35,7 +35,8 @@
 	  		<?php echo $m['typeName'];?></p>
        </td>
        <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p>
-	   		<?php echo $m['loanNum'];?></p>
+	   		<?php echo number_format ($m['loanNum'],2,'.',',');?></p>
+	   		
        </td> 
     </tr>
     <?php }?>

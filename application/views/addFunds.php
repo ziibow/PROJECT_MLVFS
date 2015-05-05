@@ -34,7 +34,7 @@
       <td><input type="text" name="fundAmount" id="fundAmount"></td>
     </tr>
     <tr>
-      <td colspan="2" align="center" bgcolor="#0FCFB4"><input type="submit" name="submit" id="submit" value="Submit"></td>
+      <td colspan="2" align="center" bgcolor="#0FCFB4"><input type="submit" name="submit" id="submit" value="บันทึกข้อมูล"></td>
     </tr>
   </tbody>
 </table>

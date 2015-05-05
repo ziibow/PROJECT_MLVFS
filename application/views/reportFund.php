@@ -26,7 +26,7 @@
 		 ?>  
     <tr>      
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $r['year'];?></p></td> 
-      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $r['fundAmount'];?></p></td>
+      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo number_format ($r['fundAmount'],2,'.',',');?></p></td>
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $r['typeName'];?></p></td>
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $r['fundDetail'];?></p></td> 
     </tr>
@@ -62,7 +62,7 @@
 		 ?>  
     <tr>      
        <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $s['year'];?></p></td> 
-      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $s['loanNum'];?></p></td>
+      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo number_format ($s['loanNum'],2,'.',',');?></p></td>
       
      
     </tr>
@@ -97,7 +97,7 @@
 		 ?>  
     <tr>      
        <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $s['year'];?></p></td> 
-      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $s['sum'];?></p></td>
+      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo number_format ($s['sum'],2,'.',',');?></p></td>
     </tr>
     
     
