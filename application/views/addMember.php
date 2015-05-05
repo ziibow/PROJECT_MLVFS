@@ -4,7 +4,40 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
 <div class="addMember">
-<form action="<?php echo base_url(); ?>index.php/admin/addMember" method="post">
+
+<script>
+function alertCheck(c,message){
+	if(c==false){
+		alert(message);
+	}
+}
+
+function checktel(tel){
+
+	if(tel*1==tel&&tel>0&&tel[0]==0){
+		if(tel.length==10){
+			return true;
+		}else{
+			return false;
+		}
+	}else{
+		return false;
+	}
+	
+}
+function main(){
+	var c = true;
+			c =checktel(document.getElementById('tel').value);
+			alertCheck(c,'กรุณาใส่เบอร์โทรให้ถูกต้อง');
+			return c;
+		
+		
+	}
+</script>
+
+
+
+<form action="<?php echo base_url(); ?>index.php/admin/addMember" method="post" onSubmit="return main()">
 
 <div class="table" align="center">
 <table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -49,7 +82,7 @@
     </tr>
        <tr>
       <td height="31" align="right">เบอร์โทร :</td>
-      <td><input type="text" name="memberTel" id="memberTel"></td>
+      <td><input type="text" name="memberTel" id="tel"></td>
     </tr>
     <tr>
       <td height="40" align="right">สถานะ</td>

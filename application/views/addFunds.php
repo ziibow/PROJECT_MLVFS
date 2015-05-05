@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
 <div class="addFunds">
+
 <form action="<?php echo base_url(); ?>index.php/admin/addFunds" method="post">
 <br><br><br><br>
 <div class="table" align="center">
