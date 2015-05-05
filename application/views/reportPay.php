@@ -29,7 +29,10 @@
     <tr>      
     <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $m['memberName'];?>&nbsp;&nbsp;<?php echo $m['memberLastname'];?></p></td>   
        
-       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p ><?php echo $m['loanDate'];?></p></td>  
+       
+       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p ><?php $date = new DateTime($m['loanDate']);
+echo $date->format('d-m-Y');?></p></td>
+	    
   
     
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $m['typeName'];?></p></td>
