@@ -95,6 +95,14 @@ class Admin extends CI_Controller {
 ######## END function addMemberView แสดงหน้าshow addview #####
 
 
+######### function addMemberView แสดงหน้าshow addview ####
+	function addBossView()
+	{
+		$this->load->view('addBoss');
+		}
+######## END function addMemberView แสดงหน้าshow addview #####
+
+
 ###### function addFundsView แสดงหน้าshow addFunds ########	
 	function editMemberView($memberId)
 	{
@@ -411,8 +419,21 @@ function sumFunds()
 	var_durm($data);
 	}
 
+
+
+
+function checkUser()
+{
+	$username = $this->input->post('username');
+	$this->Member->setMemberUsername($username);
+	$data=$this->Member->checkUsername();
+	if ($data){
+		echo 0;
+		}
+		else {
+			echo $username;
+			}
+	}
 }
-
-
 
 ?>

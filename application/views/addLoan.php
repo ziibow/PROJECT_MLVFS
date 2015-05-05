@@ -3,8 +3,19 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
+<script>
+function checkNum(){
+	var loanNum = document.getElementById('loanNum');
+	if (loanNum >1000&&loanNum<=10000){
+			return true;
+		}else {
+			alert('กรุณาใส่จำนวนเงินที่ถูกต้อง 100 ถึง 10000 บาท เท่านั้น !!!');
+			return false;
+			}
+	}
+</script>
 <?php foreach ($member as $e){?>
-<form action="<?php echo base_url(); ?>index.php/admin/addMemberLoanAction" method="post">
+<form action="<?php echo base_url(); ?>index.php/admin/addMemberLoanAction" method="post" onSubmit="return checkNum() ">
 <input name="memberId" type="hidden" value="<?php echo $e['memberId'] ?>" required="required"  readonly="readonly">
 <br><br><br><br>
 <div class="table" align="center">

@@ -24,9 +24,11 @@
     <tr>
       <td height="40" align="right">เพศ :</td>
       <td><select name="memberSex" value="<?php echo $e['memberSex'] ?>" id="memberSex">
-          <option value="man">ชาย</option>
-          <option value="owman">หญิง</option>
+      	
+          <?php if($e ['memberSex']=='man'){ echo '<option value="man" selcted" ;}>ชาย</option>';}?>
+          <?php if($e ['memberSex']=='owman'){ echo '<option value="owman" selcted" ;}>หญิง</option>';}?>
       </select></td>
+      
     </tr>
     <tr>
       <td height="31" align="right">ตำแหน่ง :</td>
@@ -47,8 +49,8 @@
     <tr>
       <td height="40" align="right">สถานะ</td>
       <td><select name="memberStatus" value="<?php echo $e['memberStatus'] ?>" id="memberStatus">
-          <option value="boss">ประธาน</option>
-          <option value="member">กรรมการ</option>
+          <option value="boss">กรรมกร</option>
+          <option value="member">สมาชิก</option>
       </select></td>
     </tr>
     <tr>

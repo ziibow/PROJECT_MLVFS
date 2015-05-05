@@ -91,6 +91,25 @@ $('.addMember').fancybox({
 	
 });
 
+$('.addBoss').fancybox({
+		openEffect  : 'fade',
+		closeEffect : 'fade',
+		maxWidth	: 1000,
+		maxHeight	: 530,
+		minWidth	: 1000,
+		minHeight	: 530,
+		fitToView	: true,
+		width 		: '100%',
+		height		: '100%',
+		padding     : 5,
+		beforeClose : function() {
+					
+       		$('.content').load('<?php echo base_url();?>index.php/admin/showMember');
+
+    }
+	
+});
+
 $('.addFunds').fancybox({
 		openEffect  : 'fade',
 		closeEffect : 'fade',
@@ -265,14 +284,14 @@ function confirme(){
         <ul>
           <li><a class="submenu" href="<?php echo base_url();?>index.php/admin/showMember">- ดูข้อมูลสมาชิก</a></li>
 		 <li><a class="addMember" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/addMemberView">- เพิ่มสมาชิก</a></li>
+         <li><a class="addBoss" data-fancybox-type="iframe" href="<?php echo base_url();?>index.php/admin/addBossView">- เพิ่มคณะกรรมการ</a></li>
         
         </ul>
       </li>
       <li>
         <a class="mainMenu" href="" onClick="return false"><img class="iconAction" src="<?php echo base_url();?>img/icon/policy.png" height="30px" > จัดการการกู้ยืม</a>
         <ul>
-          <li><a class="submenu" href="<?php echo base_url();?>index.php/admin/magLoan">- ข้อมูลการกู้ยืม</a></li>
-          		
+          <li><a class="submenu" href="<?php echo base_url();?>index.php/admin/magLoan">- ข้อมูลการกู้ยืม</a></li>	
           <li><a class="submenu" href="<?php echo base_url();?>index.php/admin/listLoan">- ทำรายการกู้ยืม</a></li>
           <li><a class="submenu" href="<?php echo base_url();?>index.php/admin/listPaymant">- ชำระเงินกองทุน</a></li>
             

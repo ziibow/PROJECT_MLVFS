@@ -15,13 +15,13 @@
     			</tr>
     			<tr>
                     <td width="47%" height="35" align="right">วันที่ :</td>
-                    <td width="53%"><input name="fundDate" type="text" value="<?php echo $f['fundDate'] ?>" required="required"  readonly="readonly"></td>
+                    <td width="53%"><?php $date = new DateTime($f['fundDate']);echo $date->format('d-m-Y');?></td>
     			</tr>
    				<tr>
                     <td height="37" align="right">ประเภทกองทุน : </td>
                     <td><select name="typeId" id="typeId">
                       <?php foreach ($type as $t ){?>
-                    	<option value="<?php echo $t['typeId'];?>" ><?php echo $t['typeName'];?> </option>
+                    	<option <?php if($t ['typeId']==$f['typeId']){ echo "selected " ;} ?> value="<?php echo $t['typeId'];?>" ><?php echo $t['typeName'];?> </option>
                           <?php 
                           }?>
                         </select></td>

@@ -1,8 +1,20 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/menu.css"/>
-
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
+
+<script src="<?php echo base_url();?>js/jquery-1.11.1.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('#button').click(function(){
+		$('#button').hide();
+		window.print();
+		}
+	);
+});
+</script>
+
 <br>
 <br>
  	
@@ -68,7 +80,7 @@
 </table>
 
 <p align="center">
-  <input type="button" onClick="window.print()" name="button" id="button" value="พิมพ์">
+  <input type="button"  name="button" id="button" value="พิมพ์">
 </p>
 <br>
 <br>

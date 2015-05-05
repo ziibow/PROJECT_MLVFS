@@ -203,8 +203,9 @@ class Member extends CI_Model {
 ###### End GET : $memberActiveStatus ###### 
 
 
+########################### FUNCTION LOGIN ################################
 
-############### FUNCTION LOGIN ####################
+########################### FUNCTION LOGIN ################################
 function login()
 {
 	$this->db->where('memberUsername',$this->getMemberUsername());
@@ -213,7 +214,23 @@ function login()
 	
 	}
 	
-############ FUNCTION FINDBYALL ###############
+########################### END FUNCTION LOGIN ############################
+
+
+########################### FUNCTION LOGIN ################################
+function checkUsername()
+{
+	$this->db->where('memberUsername',$this->getMemberUsername());
+	return $this->db->get('tblmember')->result_array();
+	
+	}
+	
+########################### END FUNCTION LOGIN ############################
+	
+	
+	
+############################ FUNCTION FINDBYALL ###########################
+############################ FUNCTION FINDBYALL ###########################
 function findByAll()
 	{	
 		$this->db->where('memberStatus','member');
@@ -221,8 +238,11 @@ function findByAll()
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
-########## END FUNCTION FINDBYALL #############
+######################### END FUNCTION FINDBYALL ###########################
 
+
+
+############################ getMemberType ###########################
 function getMemberType()
 {
 	$query = $this->db->get('tbltype')->result_array();
