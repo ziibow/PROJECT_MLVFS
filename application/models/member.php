@@ -236,7 +236,6 @@ function addMember()
 	$data = array(
 			'memberUsername' => $this->getMemberUsername(),
 			'memberPassword' => MD5($this->getMemberPassword()),
-			
 			'memberName' => $this->getMemberName(),
 			'memberLastname' => $this->getMemberLastname(),
 			'memberAddress' => $this->getMemberAddress(),
