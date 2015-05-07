@@ -49,7 +49,7 @@
     <tr>
       <td height="40" align="right">สถานะ</td>
       <td><select name="memberStatus" value="<?php echo $e['memberStatus'] ?>" id="memberStatus">
-          <option value="boss">กรรมกร</option>
+          <option value="boss">กรรมการ</option>
           <option value="member">สมาชิก</option>
       </select></td>
     </tr>

@@ -3,7 +3,12 @@
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/header.css"/>
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/table.css">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/font.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>ui/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>ui/jquery-ui.structure.min.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>ui/jquery-ui.theme.min.css">
+
 <script src="<?php echo base_url();?>js/jquery-1.11.1.min.js"></script>
+<script src="<?php echo base_url();?>ui/jquery-ui.min.js"></script>
 <div class="addMember">
 
 <script>
@@ -38,8 +43,9 @@ function main(){
 				}
 		
 	}
-
-			
+$(document).ready(function(){
+	$( "#datepicker" ).datepicker();
+});
 </script>
 
 
@@ -55,11 +61,11 @@ function main(){
    
     <tr>
       <td height="33" align="right">ชื่อ :</td>
-      <td><input type="text" name="memberName" id="memberName"></td>
+      <td><input type="text" name="memberName" id="memberName" required></td>
     </tr>
     <tr>
       <td height="37" align="right">นามสกุล :</td>
-      <td><input type="text" name="memberLastname" id="memberLastname"></td>
+      <td><input type="text" name="memberLastname" id="memberLastname" required></td>
     </tr>
     <tr>
       <td height="40" align="right">เพศ :</td>
@@ -70,19 +76,19 @@ function main(){
     </tr>
     <tr>
       <td height="31" align="right">ตำแหน่ง :</td>
-      <td><input type="text" name="memberPosition" id="memberPosition"></td>
+      <td><input type="text" name="memberPosition" id="memberPosition" required></td>
     </tr>
-    <tr>
+     <tr>
       <td height="30" align="right">วันเกิด :</td>
-      <td><input type="date" name="memberBirthday" id="memberBirthday"></td>
+      <td><input type="text" name="memberBirthday" id="datepicker" value="<?php echo date('d/m/Y');?>" readonly></td>
     </tr>
      <tr>
       <td height="31" align="right">ที่อยู่ :</td>
-      <td><input type="text" name="memberAddress" id="memberAddress"></td>
+      <td><input type="text" name="memberAddress" id="memberAddress" required></td>
     </tr>
        <tr>
       <td height="31" align="right">เบอร์โทร :</td>
-      <td><input type="text" name="memberTel" id="tel" ></td>
+      <td><input type="text" name="memberTel" id="tel" required ></td>
     </tr>
     <tr>
       <td height="40" align="right">สถานะ</td>

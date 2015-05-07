@@ -70,11 +70,11 @@ function confirme(){
     </tr>
      <tr>
       <td height="36" align="right">รายละเอียด : </td>
-      <td><input type="text" name="fundDetail" id="fundDetail"></td>
+      <td><input type="text" name="fundDetail" id="fundDetail" required></td>
     </tr>
     <tr>
       <td height="36" align="right">จำนวนเงิน : </td>
-      <td><input type="text" name="fundAmount" id="num"></td>
+      <td><input type="text" name="fundAmount" id="num" required></td>
     </tr>
     <tr>
       <td colspan="2" align="center" bgcolor="#0FCFB4"><input type="submit" name="submit" id="submit" value="บันทึกข้อมูล"></td>

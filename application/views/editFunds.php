@@ -28,11 +28,11 @@
               </tr>
      		  <tr>
                   <td height="36" align="right">รายละเอียด : </td>
-                  <td><input type="text" name="fundDetail" value="<?php echo $f['fundDetail'] ?>"id="fundDetail"></td>
+                  <td><input type="text" name="fundDetail" value="<?php echo $f['fundDetail'] ?>"id="fundDetail" required></td>
    			 </tr>
    			 <tr>
       			  <td height="36" align="right">จำนวนเงิน : </td>
-      			  <td><input type="text" name="fundAmount" value="<?php echo number_format ($f['fundAmount'],2,'.',',');?>" id="fundAmount"></td>
+      			  <td><input type="text" name="fundAmount" value="<?php echo number_format ($f['fundAmount'],2,'.',',');?>" id="fundAmount" required></td>
     		</tr>
     		<tr>
       			  <td colspan="2" align="center" bgcolor="#0FCFB4"><input type="submit" name="submit" id="submit" value="บันทึกข้อมูล"></td>

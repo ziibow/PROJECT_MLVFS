@@ -50,7 +50,7 @@ function checkNum(){
     
        <tr>
       <td height="31" align="right">จำนวนเงิน :</td>
-      <td><input type="text" name="loanNum"  id="loanNum"></td>
+      <td><input type="text" name="loanNum"  id="loanNum" required></td>
     </tr>
    
     <tr>

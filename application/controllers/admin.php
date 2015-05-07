@@ -71,7 +71,8 @@ class Admin extends CI_Controller {
 		$memberPosition = $this->input->post('memberPosition');
 		$memberBirthday = $this->input->post('memberBirthday');
 		$memberStatus = $this->input->post('memberStatus');
-		
+		//var_dump($_POST);
+		//die();
 		$this->Member->setMemberUsername($memberUsername);
 		$this->Member->setMemberPassword($memberPassword);
 		$this->Member->setMemberName($memberName);
@@ -79,7 +80,7 @@ class Admin extends CI_Controller {
 		$this->Member->setMemberAddress($memberAddress);
 		$this->Member->setMemberTel($memberTel);
 		$this->Member->setMemberPosition($memberPosition);
-		$this->Member->setMemberBirthday($memberBirthday);
+		$this->Member->setMemberBirthday($this->formatDate($memberBirthday));
 		$this->Member->setMemberStatus($memberStatus);
 		
 		$this->Member->addMember();
@@ -160,7 +161,14 @@ function deleteMember($memberId){
 		}
 		
 		
+function formatDate($date) {
+    $data = explode("/", $date);
+	//var_dump($data);
+	//die();
+    $newdata = sprintf("%d-%d-%d", $data[2], $data[1], $data[0]);
+    return $newdata;
 
+}
 
 		function addFunds()
 	{

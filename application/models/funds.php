@@ -108,6 +108,8 @@ function addFund()
 
 ########## END FUNCTION ADDFUND ###############
 
+
+############ FUNCTION editFund #################
 function editFund()
 	{
 	$data = array(
@@ -121,6 +123,7 @@ function editFund()
 		$this->db->update('tblfunds', $data); 
 	
 	}
+############ FUNCTION editFund #################
 
 function getPK()
 {

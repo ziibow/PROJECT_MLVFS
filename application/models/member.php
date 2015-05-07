@@ -230,6 +230,7 @@ function checkUsername()
 	
 	
 ############################ FUNCTION FINDBYALL ###########################
+//แสดงข้อมูลสมาชิก ที่ยังไม่ได้ทำการยกเลิกการเป็นสมาชิก 
 ############################ FUNCTION FINDBYALL ###########################
 function findByAll()
 	{	
@@ -241,16 +242,19 @@ function findByAll()
 ######################### END FUNCTION FINDBYALL ###########################
 
 
+############################ getMemberType ###########################
 
 ############################ getMemberType ###########################
 function getMemberType()
 {
 	$query = $this->db->get('tbltype')->result_array();
 		return $query;
-	}
-	
-	
-############ FUNCTION ADDFUND #################
+}
+############################ getMemberType ###########################
+
+############ FUNCTION ADDMEMBER #################
+
+############ FUNCTION ADDMEMBER #################
 function addMember()
 	{
 	$data = array(
@@ -268,9 +272,10 @@ function addMember()
 	return $this->db->insert_id();
 	}
 
-########## END FUNCTION ADDFUND ###############
+########## END FUNCTION ADDMEMBER ###############
 
 
+############ FUNCTION editMember #################
 function editMember()
 	{
 	$data = array(
@@ -286,7 +291,11 @@ function editMember()
 		$this->db->update('tblmember', $data); 
 	
 	}
+	
+############ END FUNCTION editMember #################
 
+
+############  FUNCTION getMemberPK #################
 function getMemberPK()
 {
 		//$this->db->join('tbltype','tbltype.typeId = tblfunds.typeId');
@@ -294,7 +303,10 @@ function getMemberPK()
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
-	
+############ END FUNCTION getMemberPK #################
+
+
+############  FUNCTION deleteMember #################
 	function deleteMember()
 	{
 		$data = array(
@@ -304,8 +316,10 @@ function getMemberPK()
 		$this->db->update('tblmember',$data); 
 	
 	}
+############  FUNCTION deleteMember #################
+
 	
-	############ FUNCTION FINDBYALL ###############
+############ FUNCTION search ###############
 function search()
 	{	
 		$this->db->like('memberName',$this->getMemberName());
@@ -313,8 +327,10 @@ function search()
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
-########## END FUNCTION FINDBYALL #############
+########## END FUNCTION search #############
 
+
+##########  FUNCTION getMemberNoloan #############
 function getMemberNoloan()
 {
 		$this->db->where('loanStatus','Noloan');
@@ -324,7 +340,7 @@ function getMemberNoloan()
 	
 	}
 	
-	
+##########  FUNCTION getMemberNoloan #############	
 function getMemberloan()
 {
 		$this->db->where('loanStatus','loan');
@@ -333,6 +349,9 @@ function getMemberloan()
 		return $query;
 	
 	}
+########## END  FUNCTION getMemberNoloan #############
+
+##########  FUNCTION getMemberAll #############
 function getMemberAll()
 {
 		$this->db->where('memberStatus','member');
@@ -340,7 +359,10 @@ function getMemberAll()
 		return $query;
 	}
 	
-		############ FUNCTION FINDBYALL ###############
+##########  FUNCTION getMemberAll #############
+
+
+##########  FUNCTION searchNoLoan #############
 function searchNoLoan()
 	{	
 		$this->db->like('memberName',$this->getMemberName());
@@ -348,14 +370,20 @@ function searchNoLoan()
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
-########## END FUNCTION FINDBYALL #############
+########## END FUNCTION searchNoLoan #############
+
+
+##########  FUNCTION updateStatusLoan #############
 function updateStatusLoan()
 {
 	$data=array('loanStatus'=>'loan');
 	$this->db->where('memberId',$this->getMemberId());
 	$this->db->update('tblmember',$data);
 	}
-	
+########## END FUNCTION updateStatusLoan #############	
+
+
+##########  FUNCTION getMemberPKpayment #############
 function getMemberPKpayment()
 {
 		$this->db->join('tblloan','tblloan.memberId = tblmember.memberId');
@@ -366,5 +394,6 @@ function getMemberPKpayment()
 		$query = $this->db->get('tblmember')->result_array();
 		return $query;
 	}
+########## END FUNCTION getMemberPKpayment #############
 }
 ?>

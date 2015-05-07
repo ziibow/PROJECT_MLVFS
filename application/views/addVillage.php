@@ -7,19 +7,19 @@
     </tr>
     <tr>
       <td height="33" align="right">ชื่อ</td>
-      <td><input type="text" name="memberName" id="memberName"></td>
+      <td><input type="text" name="memberName" id="memberName" required></td>
     </tr>
     <tr>
       <td height="37" align="right">สกุล</td>
-      <td><input type="text" name="memberLastname" id="memberLastname"></td>
+      <td><input type="text" name="memberLastname" id="memberLastname" required></td>
     </tr>
     <tr>
       <td height="31" align="right">ตำแหน่ง</td>
-      <td><input type="text" name="memberPosition" id="memberPosition"></td>
+      <td><input type="text" name="memberPosition" id="memberPosition" required></td>
     </tr>
     <tr>
       <td height="30" align="right">วันเกิด</td>
-      <td><input type="date" name="memberBirthday" id="memberBirthday"></td>
+      <td><input type="date" name="memberBirthday" id="memberBirthday" required></td>
     </tr>
     <tr>
       <td height="40" align="right">สถานะ</td>
