@@ -15,7 +15,7 @@ class Pay extends CI_Model {
     var $loanAmount ; ######  จำนวนเงินที่กู้  ######
     var $memberId ; ######  รหัสสมาชิก  ######
     var $paymentDate ; ######  รหัสชำระ  ######
-	 var $typeId ; ######  รหัสประเภทกองทุน  ######
+	var $typeId ; ######  รหัสประเภทกองทุน  ######
   
 ###### End Attribute  ###### 
 
