@@ -25,7 +25,7 @@
     	<th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>ชื่อ - สกุล</p></th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px"><p>ที่อยู่</p></th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">เบอร์โทร</th>
-        <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">ตำแหน่ง</th>
+        <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">จำนวนเงินที่กู้</th>
         <th align="center" valign="baseline" nowrap="nowrap" style="font-size: 12px">สถานะ</th>
           
      
@@ -40,7 +40,7 @@
        <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $m['memberName'];?>&nbsp;&nbsp;<?php echo $m['memberLastname'];?></p></td>
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p ><?php echo $m['memberAddress'];?></p></td>
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $m['memberTel'];?></p></td>
-      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo $m['memberPosition'];?></p></td>
+      <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php echo number_format ($m['loanNum'],2,'.',',');?></p></td>
       <td align="center" valign="middle" nowrap="nowrap" style="font-size: 12px"><p><?php 
 	  
 	  if($m['loanStatus']=='loan')

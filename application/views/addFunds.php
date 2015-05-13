@@ -53,7 +53,7 @@ function confirme(){
 <table width="31%" height="168" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
-      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4">เพิ่มงบประมาณ</td>
+      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4"><h2 id="headTitleContent1">เพิ่มงบประมาณ</h2></td>
     </tr>
     <tr>
       <td width="47%" height="35" align="right">วันที่ :</td>

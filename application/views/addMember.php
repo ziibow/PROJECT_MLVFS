@@ -56,7 +56,7 @@ $(document).ready(function(){
 <table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tbody>
     <tr>
-      <td height="33" colspan="2" align="center" bgcolor="#0FCFB4">เพิ่มสมาชิก</td>
+      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4"><h2 id="headTitleContent1">เพิ่มสมาชิกกองทุน</h2></td>
     </tr>
    
     <tr>
@@ -70,6 +70,7 @@ $(document).ready(function(){
     <tr>
       <td height="40" align="right">เพศ :</td>
       <td><select name="memberSex" id="memberSex">
+      	  <option value="">--กรุณาระบุ--</option>
           <option value="man">ชาย</option>
           <option value="owman">หญิง</option>
       </select></td>
@@ -93,7 +94,6 @@ $(document).ready(function(){
     <tr>
       <td height="40" align="right">สถานะ</td>
       <td><select name="memberStatus" id="memberStatus">
-          <option value="boss">กรรมการ</option>
           <option value="member">สมาชิก </option>
       </select></td>
     </tr>

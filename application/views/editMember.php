@@ -10,7 +10,8 @@
 <div class="table" align="center">
 <table width="43%" border="0" align="center" cellpadding="0" cellspacing="0">
     <tr>
-      <td height="33" colspan="2" align="center" bgcolor="#0FCFB4">แก้ไขข้อมูลสมาชิก</td>
+      
+      <td height="28" colspan="2" align="center" bgcolor="#0FCFB4"><h2 id="headTitleContent1">แก้ไขข้อมูลสมาชิก</h2></td>
     </tr>
    
     <tr>

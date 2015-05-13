@@ -106,6 +106,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c7097182', e
 	text-shadow:1px 1px 1px #4E4E4E;
 	padding:10px;
 }
+
+#headTitleContent1{
+	font-family: thaisanslite_r1 Vera Serif Bold,Bold;
+	font-weight:600;
+	font-size:25px;
+	text-shadow:1px 1px 1px #4E4E4E;
+	padding:10px;
+}
 #headTitleContentbg{
 	text-decoration:underline;
 	width:60%;
